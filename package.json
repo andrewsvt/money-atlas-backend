@@ -1,0 +1,57 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "./node_modules/.bin/eslint --fix ./",
+    "start:dev": "nodemon server.js",
+    "start": "node server.js",
+    "db:pg:migration": "$(npm bin)/knex --knexfile=./app/dbs/pg/knexfile.js migrate:make $1",
+    "db:pg:migrate": "$(npm bin)/knex --knexfile=./app/dbs/pg/knexfile.js migrate:latest",
+    "db:pg:rollback": "$(npm bin)/knex --knexfile=./app/dbs/pg/knexfile.js migrate:rollback",
+    "db:pg:seed": "$(npm bin)/knex --knexfile=./app/dbs/pg/knexfile.js seed:run",
+    "db:pg:make-seed": "$(npm bin)/knex --knexfile=./app/dbs/pg/knexfile.js seed:make $1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
+    "@types/morgan": "^1.9.3",
+    "bcryptjs": "^2.4.3",
+    "camelcase-keys": "^7.0.1",
+    "change-case": "^4.1.2",
+    "cors": "^2.8.5",
+    "crypto-random-string": "^4.0.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "express": "^4.17.1",
+    "express-openapi-validator": "^4.13.2",
+    "faker": "^5.5.3",
+    "helmet": "^4.6.0",
+    "http-errors": "^1.8.0",
+    "knex": "^0.95.14",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.14",
+    "pg": "^8.7.1",
+    "swagger-ui-express": "^4.1.6",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
+  }
+}

@@ -49,14 +49,7 @@ const list = async ({ limit, offset, columns = defaultColumns, filters, sort }) 
     query.orderBy(sort, 'desc');
   }
 
-
-  console.log(query.toString());
-
   const results = await query;
-
-
-
-    // .where('email', 'like', `${q}%`)
 
   return results;
 };

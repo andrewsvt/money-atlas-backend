@@ -11,7 +11,6 @@ const get = wrapAsyncRoute(async (req, res) => {
     throw createError(404);
   }
 
-
   return res.status(200).json({
     ...card,
     serviceCardId: Number(card.serviceCardId)

@@ -52,20 +52,20 @@ const cardsPaths = {
           name: 'issuer',
           schema: {
             type: 'string',
-            enum: [
-              'American Express', 'Applied Bank', 'Avant', 
-              'Bank of America', 'Bilt', 'Brigit', 'Capital Bank', 
-              'Capital One', 'Celtic Bank', 'Chase', 'Chime', 'Citi', 
-              'Deserve', 'Discover', 'First Progress', 'Genesis Bankcard', 
-              'Greenlight', 'Luxury Card', 'Marcus', 'Merrick Bank', 'Navy FCU', 
-              'NetSpend', 'PenFed', 'Petal', 'Plains Commerce Bank', 'Prosper', 
-              'Reliant Holdings', 'Self', 'SoFi', 'Synchrony', 'Synovus Bank', 
-              'TD Bank', 'The Bank of Missouri', 'US Bank', 'Upgrade', 'Verizon', 
-              'Wells Fargo'
-            ]
+            // enum: [
+            //   'American Express', 'Applied Bank', 'Avant', 
+            //   'Bank of America', 'Bilt', 'Brigit', 'Capital Bank', 
+            //   'Capital One', 'Celtic Bank', 'Chase', 'Chime', 'Citi', 
+            //   'Deserve', 'Discover', 'First Progress', 'Genesis Bankcard', 
+            //   'Greenlight', 'Luxury Card', 'Marcus', 'Merrick Bank', 'Navy FCU', 
+            //   'NetSpend', 'PenFed', 'Petal', 'Plains Commerce Bank', 'Prosper', 
+            //   'Reliant Holdings', 'Self', 'SoFi', 'Synchrony', 'Synovus Bank', 
+            //   'TD Bank', 'The Bank of Missouri', 'US Bank', 'Upgrade', 'Verizon', 
+            //   'Wells Fargo'
+            // ]
           },
           required: false,
-          description: 'Card issuer',
+          description: 'Card issuer. For example American Express',
         },
         {
           in: 'query',

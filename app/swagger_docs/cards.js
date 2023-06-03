@@ -282,6 +282,7 @@ const cardsDefinitions = {
       prosAndCons: { type: 'string', nullable: true },
       reviewSectionText: { type: 'string', nullable: true },
       ppcDescription: { type: 'string', nullable: true },
+      lastUpdated: { type: 'string', nullable:  true }
     },
   },
 };

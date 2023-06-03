@@ -107,7 +107,7 @@ const cardsPaths = {
               'id',
               'rank'
             ],
-            default: 'id'
+            default: 'rank'
           },
           required: false,
           description: 'Sort',

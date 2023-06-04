@@ -157,6 +157,65 @@ const cardsPaths = {
       },
     },
   },
+  '/cards/slug/{slug}': {
+    get: {
+      tags: ['Cards'],
+      summary: 'Get cards data by slug',
+      parameters: [
+        {
+          in: 'path',
+          name: 'slug',
+          schema: {
+            type: 'string',
+          },
+          required: true,
+          description: 'Card slug',
+        },
+      ],
+      responses: {
+        200: {
+          description: 'Card data',
+          content: {
+            'application/json': {
+              schema: {
+                $ref: '#/components/schemas/CardData',
+              },
+            },
+          },
+        },
+        400: {
+          description: 'Request validation failed',
+          content: {
+            'application/json': {
+              schema: {
+                $ref: '#/components/schemas/RequestValidationError',
+              },
+            },
+          },
+        },
+        403: {
+          description: 'Forbidden',
+          content: {
+            'application/json': {
+              schema: {
+                $ref: '#/components/schemas/ForbiddenError',
+              },
+            },
+          },
+        },
+        404: {
+          description: 'Not found',
+          content: {
+            'application/json': {
+              schema: {
+                $ref: '#/components/schemas/NotFound',
+              },
+            },
+          },
+        },
+      },
+    },
+  },
   '/cards/{id}': {
     get: {
       tags: ['Cards'],
@@ -282,7 +341,10 @@ const cardsDefinitions = {
       prosAndCons: { type: 'string', nullable: true },
       reviewSectionText: { type: 'string', nullable: true },
       ppcDescription: { type: 'string', nullable: true },
-      lastUpdated: { type: 'string', nullable:  true }
+      lastUpdated: { type: 'string', nullable:  true },
+      slug: { type: 'string', nullable:  true },
+      pros: { type: 'string', nullable:  true },
+      cons: { type: 'string', nullable:  true }
     },
   },
 };

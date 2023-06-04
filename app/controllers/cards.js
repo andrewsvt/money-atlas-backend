@@ -17,6 +17,21 @@ const get = wrapAsyncRoute(async (req, res) => {
   });
 });
 
+const getBySlug = wrapAsyncRoute(async (req, res) => {
+  const { slug } = req.params;
+
+  const card = await cardsService.getBySlug({ slug });
+
+  if (!card) {
+    throw createError(404);
+  }
+
+  return res.status(200).json({
+    ...card,
+    serviceCardId: Number(card.serviceCardId)
+  });
+});
+
 const list = wrapAsyncRoute(async (req, res) => {
   const { limit, offset, category, issuer, cardProcessor, creditRange, sort } = req.query;
 
@@ -43,4 +58,5 @@ const list = wrapAsyncRoute(async (req, res) => {
 module.exports = {
   list,
   get,
+  getBySlug,
 };

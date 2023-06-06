@@ -346,7 +346,8 @@ const cardsDefinitions = {
       pros: { type: 'string', nullable:  true },
       cons: { type: 'string', nullable:  true },
       badgeText: { type: 'string', nullable:  true },
-      link: { type: 'string', nullable:  true }
+      link: { type: 'string', nullable:  true },
+      defaultCreditCardTypeName: { type: 'string', nullable:  true },
     },
   },
 };

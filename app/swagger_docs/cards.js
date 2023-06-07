@@ -327,7 +327,7 @@ const cardsDefinitions = {
       displayName: { type: 'string' },
       cardName: { type: 'string' },
       rawLogoImageUrl: { type: 'string' },
-      editorRating: { type: 'string' },
+      editorRating: { type: 'number' },
       termsAndConditionsLink: { type: 'string', nullable: true  },
       bonusMilesFull: { type: 'string', nullable: true  },
       rewardsDescriptionLong: { type: 'string', nullable: true },

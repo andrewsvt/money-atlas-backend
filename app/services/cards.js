@@ -8,7 +8,7 @@ const defaultColumns = [
   'card_processor_type_name', 'intro_apr_rate', 'intro_apr_duration', 'service_card_id' ,'ppc_description',
   'pros', 'cons', 'review_section_text', 'last_updated', 'slug', 'badge_text', 'link', 'default_credit_card_type_name',
   'balance_transfer_intro_apr', 'cash_advance_apr', 'cash_advance_fee', 'foreign_transaction_fee',
-  'balance_transfer_fees'
+  'balance_transfer_fees', 'cta_button_text'
 ];
 
 const get = async ({ id, columns = defaultColumns }) => {

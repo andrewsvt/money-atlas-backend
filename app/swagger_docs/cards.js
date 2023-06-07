@@ -353,6 +353,7 @@ const cardsDefinitions = {
       cashAdvanceFee:  { type: 'string', nullable:  true },
       foreignTransactionFee:  { type: 'string', nullable:  true },
       balanceTransferFees:  { type: 'string', nullable:  true },
+      ctaButtonText:  { type: 'string', nullable:  true },
     },
   },
 };

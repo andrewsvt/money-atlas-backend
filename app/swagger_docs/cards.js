@@ -348,6 +348,11 @@ const cardsDefinitions = {
       badgeText: { type: 'string', nullable:  true },
       link: { type: 'string', nullable:  true },
       defaultCreditCardTypeName: { type: 'string', nullable:  true },
+      balanceTransferIntroApr:  { type: 'string', nullable:  true },
+      cashAdvanceApr:  { type: 'string', nullable:  true },
+      cashAdvanceFee:  { type: 'string', nullable:  true },
+      foreignTransactionFee:  { type: 'string', nullable:  true },
+      balanceTransferFees:  { type: 'string', nullable:  true },
     },
   },
 };

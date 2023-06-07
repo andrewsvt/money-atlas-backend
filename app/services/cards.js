@@ -6,7 +6,9 @@ const defaultColumns = [
   'id', 'display_name', 'card_name', 'raw_logo_image_url', 'editor_rating', 'terms_and_conditions_link',
   'bonus_miles_full', 'rewards_description_long', 'reg_apr', 'reg_apr_type', 'annual_fees', 'credit_score_needed',
   'card_processor_type_name', 'intro_apr_rate', 'intro_apr_duration', 'service_card_id' ,'ppc_description',
-  'pros', 'cons', 'review_section_text', 'last_updated', 'slug', 'badge_text', 'link', 'default_credit_card_type_name'
+  'pros', 'cons', 'review_section_text', 'last_updated', 'slug', 'badge_text', 'link', 'default_credit_card_type_name',
+  'balance_transfer_intro_apr', 'cash_advance_apr', 'cash_advance_fee', 'foreign_transaction_fee',
+  'balance_transfer_fees'
 ];
 
 const get = async ({ id, columns = defaultColumns }) => {
